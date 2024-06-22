@@ -1,11 +1,11 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
 import Link from "next/link";
+import TypeWriter from "../TypeWriter";
 
 const Logo = () => {
   return (
     <Link href="/">
-      <Text size="lg" fontWeight="bold">{`< Kelvin />`}</Text>
+      <TypeWriter text="<  Kelvin />" size="lg" fontWeight="bold" />
     </Link>
   );
 };
