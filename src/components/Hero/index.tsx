@@ -18,7 +18,7 @@ const MotionStack = motion(Stack);
 
 const Hero = () => {
   return (
-    <Flex direction={["column", "row"]} padding={20}>
+    <Flex direction={["column", "row"]} padding={[12, 20]}>
       <MotionStack
         variants={fromLeft}
         initial="hidden"
