@@ -1,7 +1,9 @@
 "use client";
 
-import { Flex, Heading, Stack } from "@chakra-ui/react";
+import Image from "next/image";
+import { Center, Flex, Heading, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import programmer_img from "@/assets/programmer.png"
 
 // appears from the left
 const fromLeft = {
@@ -11,14 +13,15 @@ const fromLeft = {
 
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration: 0.75 } },
 };
 
 const MotionStack = motion(Stack);
+const MotionCenter = motion(Center);
 
 const Hero = () => {
   return (
-    <Flex direction={["column", "row"]} padding={[12, 20]}>
+    <Flex direction={["column", "row"]} padding={[8, 28]}>
       <MotionStack
         variants={fromLeft}
         initial="hidden"
@@ -42,6 +45,15 @@ const Hero = () => {
           FRONT-END AND MOBILE DEVELOPER
         </Heading>
       </MotionStack>
+
+      <MotionCenter
+        variants={fadeIn}
+        initial="hidden"
+        animate="visible"
+        width={{ base: "100%", md: "50%" }}
+      >
+        <Image src={programmer_img} alt="programmer image" />
+      </MotionCenter>
     </Flex>
   );
 };
