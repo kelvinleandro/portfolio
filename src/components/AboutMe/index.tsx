@@ -8,7 +8,7 @@ const AboutMe = () => {
         <SectionTitle>ABOUT ME</SectionTitle>
       </Box>
       <Box paddingX={[8, 28]}>
-        <Text fontSize="lg" textAlign="center">
+        <Text fontSize={["base", "lg"]} textAlign="left">
           My name is Kelvin Leandro. I am Brazilian and currently a student of
           Computer Engineering at the Federal University of Ceará. During my
           academic life, I participated in projects such as the junior

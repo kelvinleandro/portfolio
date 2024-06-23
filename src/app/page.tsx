@@ -1,12 +1,17 @@
+"use client";
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import { Flex } from "@chakra-ui/react";
-import './globals.css'
+import { Flex, useColorModeValue } from "@chakra-ui/react";
+import "./globals.css";
 import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
+  const bg = useColorModeValue("main.creamWhite", "main.blue800");
+  const color = useColorModeValue("main.blue800", "main.creamWhite");
+
   return (
-    <Flex direction='column' bg="main.grey700" width="100vw" color="main.creamWhite" >
+    <Flex direction="column" width="100vw">
       <Header />
       <Hero />
       <AboutMe />

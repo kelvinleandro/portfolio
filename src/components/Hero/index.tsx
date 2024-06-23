@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Flex, Heading, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -29,7 +29,13 @@ const Hero = () => {
         <Heading as="h2" fontSize="2xl">
           HELLO, FRIEND. I AM
         </Heading>
-        <Heading as="h1" fontSize="6xl">
+        <Heading
+          as="h1"
+          fontSize="6xl"
+          bgGradient="linear(to-r, main.blueMarguerite, main.blue600)"
+          bgClip="text"
+          // textFillColor="transparent"
+        >
           KELVIN LEANDRO
         </Heading>
         <Heading as="h2" fontSize="2xl">
