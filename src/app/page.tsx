@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import { Flex, useColorModeValue } from "@chakra-ui/react";
 import "./globals.css";
 import AboutMe from "@/components/AboutMe";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const bg = useColorModeValue("main.creamWhite", "main.blue800");
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutMe />
+      <Footer />
     </Flex>
   );
 }
