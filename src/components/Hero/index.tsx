@@ -4,6 +4,8 @@ import { Box, Center, Flex, Heading, Stack } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/next-js";
 import { motion } from "framer-motion";
 import programmer_img from "@/assets/programmer.png";
+import MatrixRain from "../MatrixRain";
+import { useRef } from "react";
 
 // appears from the left
 const fromLeft = {
@@ -20,6 +22,8 @@ const MotionStack = motion(Stack);
 const MotionCenter = motion(Center);
 
 const Hero = () => {
+  const imageBoxRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
@@ -60,7 +64,8 @@ const Hero = () => {
         maxW={{md: "200px"}}
         overflow="hidden"
       >
-        <Box width="100%" height="auto" >
+        <Box ref={imageBoxRef} width="100%" height="auto" position="relative" >
+          <MatrixRain parentRef={imageBoxRef} />
           <Image
             src={programmer_img}
             alt="programmer image"
@@ -68,6 +73,10 @@ const Hero = () => {
               width: "100%",
               height: "auto",
               objectFit: "contain",
+              position: "absolute",
+              zIndex: 10,
+              top: 0,
+              left: 0,
             }}
           />
         </Box>
