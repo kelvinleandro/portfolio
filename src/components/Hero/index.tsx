@@ -37,21 +37,21 @@ const Hero = () => {
         variants={fromLeft}
         initial="hidden"
         animate="visible"
-        width={{ base: "100%", md: "60%" }}
+        width={{ base: "100%", md: "50%" }}
         justifyContent="center"
       >
-        <Heading as="h2" fontSize="xl">
+        <Heading as="h2" fontSize="2xl">
           HELLO, FRIEND. I AM
         </Heading>
         <Heading
           as="h1"
-          fontSize="5xl"
+          fontSize="6xl"
           bgGradient="linear(to-r, main.blueMarguerite, main.blue600)"
           bgClip="text"
         >
           KELVIN LEANDRO
         </Heading>
-        <Heading as="h2" fontSize="xl">
+        <Heading as="h2" fontSize="2xl">
           FRONT-END AND MOBILE DEVELOPER
         </Heading>
       </MotionStack>
@@ -60,13 +60,14 @@ const Hero = () => {
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        width={{ base: "100%", md: "40%" }}
-        maxW={{md: "200px"}}
+        width={{ base: "100%", md: "50%" }}
+        maxW={{md: "250px"}}
         overflow="hidden"
       >
         <Box ref={imageBoxRef} width="100%" height="auto" position="relative" >
           <MatrixRain parentRef={imageBoxRef} />
           <Image
+            padding={4}
             src={programmer_img}
             alt="programmer image"
             style={{

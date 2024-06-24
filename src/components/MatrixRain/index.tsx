@@ -38,7 +38,7 @@ const MatrixRain = ({parentRef}: Props) => {
     }
 
     const draw = () => {
-      context.fillStyle = colorMode === "dark" ? '#0B1222' : "#F5F5F5";
+      context.fillStyle = colorMode === "dark" ? 'rgba(11, 18, 34, 0.25)' : "rgba(245, 245, 245, 0.25)";
       context.fillRect(0, 0, canvas.width, canvas.height);
 
       context.fillStyle = "#0F0";

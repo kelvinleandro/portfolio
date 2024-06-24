@@ -2,6 +2,7 @@ import ubuntu from "@/assets/ubuntu.png";
 import kgpt from "@/assets/k-gpt.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
+import password_generator from "@/assets/password_generator.png";
 import { Project } from "@/types/project";
 
 const REACT_PROJECTS: Project[] = [
@@ -20,11 +21,11 @@ const REACT_PROJECTS: Project[] = [
     imagePath: kgpt,
   },
   {
-    title: "K-GPT",
+    title: "Password Generator",
     description:
-      "A ChatBot, visually inspired by the ChatGPT UI, utilizing the OpenAI API to provide AI responses",
-    url: "https://github.com/kelvinleandro/chatgpt-clone-site",
-    imagePath: kgpt,
+      "Forget passwords like \"yourname123\". Use this page to customize your password length and create a more secure one.",
+    url: "https://github.com/kelvinleandro/react-password-generator",
+    imagePath: password_generator,
   },
 ];
 
