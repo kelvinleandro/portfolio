@@ -18,17 +18,20 @@ type Props = {
 };
 
 const ProjectItem = ({ item }: Props) => {
-  const color = useColorModeValue("main.blue800", "main.creamWhite")
-  
+  const color = useColorModeValue("main.blue800", "main.creamWhite");
+
   return (
     <Card
+      display="flex"
+      flexDirection="column"
+      height="100%"
       maxW="300px"
-      border="2px"
+      borderWidth="3px"
       borderColor="main.grey300"
       transition="border-color 0.3s ease"
       _hover={{ borderColor: "main.blueMarguerite" }}
     >
-      <CardBody>
+      <CardBody flex="1">
         <Image src={item.imagePath} alt={item.title} borderRadius="lg" />
         <Stack mt={3} spacing={3}>
           <Heading as="h4" fontSize="2xl">
@@ -47,7 +50,11 @@ const ProjectItem = ({ item }: Props) => {
           textDecoration="none"
           color={color}
           bg="rgba(127, 86, 217, 0.4)"
-          _hover={{ textDecoration: "none", bg: "main.blueMarguerite", color: "main.creamWhite" }}
+          _hover={{
+            textDecoration: "none",
+            bg: "main.blueMarguerite",
+            color: "main.creamWhite",
+          }}
         >
           View on GitHub
         </Button>
