@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fira.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

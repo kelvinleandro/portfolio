@@ -5,7 +5,7 @@ import TypeWriter from "../TypeWriter";
 const Logo = () => {
   return (
     <Link href="/">
-      <TypeWriter text="<  Kelvin />" size="lg" fontWeight="bold" />
+      <TypeWriter text="<  Kelvin />" fontSize="lg" fontWeight="bold" />
     </Link>
   );
 };

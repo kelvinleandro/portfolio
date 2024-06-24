@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { Center, Flex, Heading, Stack } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Stack } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/next-js";
 import { motion } from "framer-motion";
-import programmer_img from "@/assets/programmer.png"
+import programmer_img from "@/assets/programmer.png";
 
 // appears from the left
 const fromLeft = {
@@ -21,27 +21,33 @@ const MotionCenter = motion(Center);
 
 const Hero = () => {
   return (
-    <Flex direction={["column", "row"]} padding={[8, 28]}>
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      paddingX={[8, 28]}
+      paddingY={4}
+      overflow="hidden"
+      align="center"
+      justify="space-between"
+    >
       <MotionStack
         variants={fromLeft}
         initial="hidden"
         animate="visible"
-        width={{ base: "100%", md: "50%" }}
+        width={{ base: "100%", md: "60%" }}
         justifyContent="center"
       >
-        <Heading as="h2" fontSize="2xl">
+        <Heading as="h2" fontSize="xl">
           HELLO, FRIEND. I AM
         </Heading>
         <Heading
           as="h1"
-          fontSize="6xl"
+          fontSize="5xl"
           bgGradient="linear(to-r, main.blueMarguerite, main.blue600)"
           bgClip="text"
-          // textFillColor="transparent"
         >
           KELVIN LEANDRO
         </Heading>
-        <Heading as="h2" fontSize="2xl">
+        <Heading as="h2" fontSize="xl">
           FRONT-END AND MOBILE DEVELOPER
         </Heading>
       </MotionStack>
@@ -50,9 +56,21 @@ const Hero = () => {
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        width={{ base: "100%", md: "50%" }}
+        width={{ base: "100%", md: "40%" }}
+        maxW={{md: "200px"}}
+        overflow="hidden"
       >
-        <Image src={programmer_img} alt="programmer image" />
+        <Box width="100%" height="auto" >
+          <Image
+            src={programmer_img}
+            alt="programmer image"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
       </MotionCenter>
     </Flex>
   );

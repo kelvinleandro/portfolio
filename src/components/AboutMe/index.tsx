@@ -3,7 +3,7 @@ import SectionTitle from "../SectionTitle";
 
 const AboutMe = () => {
   return (
-    <Flex justifyContent="center" direction="column" gap={4}>
+    <Flex justifyContent="center" direction="column" gap={4} marginY={4}>
       <Box>
         <SectionTitle>ABOUT ME</SectionTitle>
       </Box>

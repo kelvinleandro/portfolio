@@ -12,6 +12,7 @@ const Footer = () => {
       justify={["center", "space-between"]}
       gap={4}
       paddingX={[8, 28]}
+      paddingY={4}
       marginTop={8}
     >
       <Stack direction="row" spacing={3}>
