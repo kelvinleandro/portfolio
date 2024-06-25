@@ -24,7 +24,7 @@ const socialMedia = [
   },
   {
     label: "Instagram",
-    link: "https://www.intagram.com/kelvinleandr0",
+    link: "https://www.instagram.com/kelvinleandr0",
     Icon: InstagramIcon,
   },
 ];
