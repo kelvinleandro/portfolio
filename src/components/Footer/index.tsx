@@ -1,10 +1,36 @@
-import { Flex, IconButton, Stack, Text, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  IconButton,
+  Stack,
+  Text,
+  Link,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import GithubIcon from "../Icons/GithubIcon";
 import LinkedinIcon from "../Icons/LinkedinIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
 
+const socialMedia = [
+  {
+    label: "Github",
+    link: "https://www.github.com/kelvinleandro",
+    Icon: GithubIcon,
+  },
+  {
+    label: "Linkedin",
+    link: "https://linkedin.com/in/kelvinleandro",
+    Icon: LinkedinIcon,
+  },
+  {
+    label: "Instagram",
+    link: "https://www.intagram.com/kelvinleandr0",
+    Icon: InstagramIcon,
+  },
+];
+
 const Footer = () => {
+  const hoverColor = useColorModeValue("main.blue800", "main.blue600");
   return (
     <Flex
       direction={["column", "row-reverse"]}
@@ -16,39 +42,22 @@ const Footer = () => {
       marginTop={8}
     >
       <Stack direction="row" spacing={3}>
-        {/* <IconButton
-          as={Link}
-          isRound={true}
-          aria-label="Github"
-          icon={<GithubIcon height={18} width={18} />}
-          href="https://www.github.com/kelvinleandro"
-          target="_blank"
-          rel="noopener noreferrer"
-        /> */}
-
-        <Link
-          href="https://www.github.com/kelvinleandro"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon fontSize={24} />
-        </Link>
-
-        <Link
-          href="https://linkedin.com/in/kelvinleandro"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon fontSize={24} />
-        </Link>
-
-        <Link
-          href="https://www.instagram.com/kelvinleandr0"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <InstagramIcon fontSize={24} />
-        </Link>
+        {socialMedia.map(({ label, link, Icon }, index) => (
+          <IconButton
+            key={index}
+            as={Link}
+            isRound={true}
+            aria-label={label}
+            icon={<Icon boxSize={6} />}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+            variant="link"
+            padding={0}
+            _hover={{ color: hoverColor }}
+          />
+        ))}
       </Stack>
 
       <Text fontSize="small">Developed by Kelvin Leandro.</Text>
