@@ -3,7 +3,7 @@
 import { Box, Center, Flex, Heading, Stack } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/next-js";
 import { motion } from "framer-motion";
-import programmer_img from "@/assets/programmer.png";
+import programmer_img from "@/assets/programmer1.png";
 import MatrixRain from "../MatrixRain";
 import { useRef } from "react";
 
@@ -32,6 +32,7 @@ const Hero = () => {
       overflow="hidden"
       align="center"
       justify="space-between"
+      gap={4}
     >
       <MotionStack
         variants={fromLeft}
@@ -61,13 +62,12 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         width={{ base: "100%", md: "50%" }}
-        maxW={{md: "250px"}}
+        maxW={{md: "300px"}}
         overflow="hidden"
       >
         <Box ref={imageBoxRef} width="100%" height="auto" position="relative" >
           <MatrixRain parentRef={imageBoxRef} />
           <Image
-            padding={4}
             src={programmer_img}
             alt="programmer image"
             style={{

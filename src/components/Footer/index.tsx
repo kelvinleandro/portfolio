@@ -31,6 +31,8 @@ const socialMedia = [
 
 const Footer = () => {
   const hoverColor = useColorModeValue("main.blue800", "main.blue600");
+  const borderColor = useColorModeValue("rgba(0,0,0, 0.25)", "rgba(255, 255, 255, 0.25)")
+  
   return (
     <Flex
       direction={["column", "row-reverse"]}
@@ -40,6 +42,8 @@ const Footer = () => {
       paddingX={[8, 28]}
       paddingY={4}
       marginTop={8}
+      borderTop="1px"
+      borderTopColor={borderColor}
     >
       <Stack direction="row" spacing={3}>
         {socialMedia.map(({ label, link, Icon }, index) => (
