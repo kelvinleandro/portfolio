@@ -48,12 +48,12 @@ const ProjectItem = ({ item }: Props) => {
           leftIcon={<GithubIcon />}
           variant="solid"
           textDecoration="none"
-          color={color}
-          bg="rgba(127, 86, 217, 0.4)"
+          color="main.creamWhite"
+          bg="main.blueMarguerite"
           _hover={{
             textDecoration: "none",
-            bg: "main.blueMarguerite",
-            color: "main.creamWhite",
+            bg: "rgba(127, 86, 217, 0.4)",
+            color: color,
           }}
         >
           View on GitHub
