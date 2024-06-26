@@ -6,7 +6,7 @@ import ProjectList from "../ProjectList";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const MotionCenter = motion(Center);
+const MotionHeading = motion(Heading);
 
 const Projects = () => {
   const { ref: reactRef, inView: reactInView } = useInView({
@@ -41,33 +41,35 @@ const Projects = () => {
         <SectionTitle>Projects</SectionTitle>
       </Box>
 
-      <MotionCenter
-        flexDirection="column"
-        marginTop={2}
-        initial="hidden"
-        animate={reactInView ? "visible" : "hidden"}
-        variants={fadeInSlideUpVariants}
-        ref={reactRef}
-      >
-        <Heading as="h3" fontSize="2xl" marginY={3}>
+      <Center flexDirection="column" marginTop={2}>
+        <MotionHeading
+          as="h3"
+          fontSize="2xl"
+          marginY={3}
+          initial="hidden"
+          animate={reactInView ? "visible" : "hidden"}
+          variants={fadeInSlideUpVariants}
+          ref={reactRef}
+        >
           REACT
-        </Heading>
+        </MotionHeading>
         <ProjectList data={REACT_PROJECTS} />
-      </MotionCenter>
+      </Center>
 
-      <MotionCenter
-        flexDirection="column"
-        marginTop={2}
-        initial="hidden"
-        animate={reactNativeInView ? "visible" : "hidden"}
-        variants={fadeInSlideUpVariants}
-        ref={reactNativeRef}
-      >
-        <Heading as="h3" fontSize="2xl" marginY={3}>
+      <Center flexDirection="column" marginTop={2}>
+        <MotionHeading
+          as="h3"
+          fontSize="2xl"
+          marginY={3}
+          initial="hidden"
+          animate={reactNativeInView ? "visible" : "hidden"}
+          variants={fadeInSlideUpVariants}
+          ref={reactNativeRef}
+        >
           REACT NATIVE
-        </Heading>
+        </MotionHeading>
         <ProjectList data={REACT_NATIVE_PROJECTS} />
-      </MotionCenter>
+      </Center>
     </Flex>
   );
 };
