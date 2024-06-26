@@ -42,6 +42,7 @@ const NotFound = () => {
             as={Link}
             href="/"
             variant="solid"
+            size="lg"
             bg="main.blueMarguerite"
             color="main.creamWhite"
             _hover={{
