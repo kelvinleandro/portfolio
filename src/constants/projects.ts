@@ -2,7 +2,7 @@ import ubuntu from "@/assets/ubuntu.png";
 import kgpt from "@/assets/k-gpt.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
-import password_generator from "@/assets/password_generator.png";
+import easybank from "@/assets/easybank.png";
 import { Project } from "@/types/project";
 
 const REACT_PROJECTS: Project[] = [
@@ -21,11 +21,11 @@ const REACT_PROJECTS: Project[] = [
     imagePath: kgpt,
   },
   {
-    title: "Password Generator",
+    title: "Easybank",
     description:
-      "Forget passwords like \"yourname123\". Use this page to customize your password length and create a more secure one.",
-    url: "https://github.com/kelvinleandro/react-password-generator",
-    imagePath: password_generator,
+      "Landing page project challenge for a fictitious digital banking called Easybank",
+    url: "https://github.com/kelvinleandro/react-easybank",
+    imagePath: easybank,
   },
 ];
 
