@@ -3,6 +3,7 @@ import kgpt from "@/assets/k-gpt.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
 import easybank from "@/assets/easybank.png";
+import quintura from "@/assets/quintura.png"
 import { Project } from "@/types/project";
 
 const REACT_PROJECTS: Project[] = [
@@ -33,16 +34,16 @@ const REACT_NATIVE_PROJECTS: Project[] = [
   {
     title: "ClapperFlix",
     description:
-      "A movie app using the TMDB API, featuring login and registration authentication with Firebase and Firestore to save favorite movies",
+      "A movie app using the TMDB API, featuring login and registration authentication with Firebase and Firestore to save favorite movies.",
     url: "https://github.com/kelvinleandro/movie-app",
     imagePath: clapperflix,
   },
   {
-    title: "TODO App",
+    title: "Quintura",
     description:
-      "The classic todo app, utilizing the Context API for performing CRUD operations and Expo SQLite for data persistence. Additionally, it supports theme customization.",
-    url: "https://github.com/kelvinleandro/todo-app",
-    imagePath: todo,
+      "\"Quintura\" is a weather app that utilizes the WeatherAPI to provide users with real-time weather forecasts. It allows users to select their preferred units of measurement for a personalized experience.",
+    url: "https://github.com/kelvinleandro/weather-app",
+    imagePath: quintura,
   },
   {
     title: "TODO App",
