@@ -39,7 +39,7 @@ const Footer = () => {
       align="center"
       justify={["center", "space-between"]}
       gap={4}
-      paddingX={[8, 28]}
+      paddingX={{base: 8, sm: 14, md: 28}}
       paddingY={4}
       marginTop={8}
       borderTop="1px"

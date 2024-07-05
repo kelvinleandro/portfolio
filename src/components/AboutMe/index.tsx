@@ -22,7 +22,7 @@ const AboutMe = () => {
       direction="column"
       gap={4}
       marginY={4}
-      paddingX={[8, 28]}
+      paddingX={{base: 8, sm: 14, md: 28}}
       ref={ref}
     >
       <MotionBox

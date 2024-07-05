@@ -7,7 +7,7 @@ const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex justify="space-between" paddingX={[8, 20]} paddingY={3} align="center">
+    <Flex justify="space-between" paddingX={{base: 8, sm: 14, md: 28}} paddingY={3} align="center">
       <Logo />
       <IconButton
         aria-label="Toggle theme"
