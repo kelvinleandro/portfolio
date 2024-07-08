@@ -5,7 +5,13 @@ import TypeWriter from "../TypeWriter";
 const Logo = () => {
   return (
     <Link href="/">
-      <TypeWriter text="<  Kelvin />" fontSize="lg" fontWeight="bold" />
+      <TypeWriter
+        text="<  Kelvin/>"
+        fontSize="lg"
+        fontWeight="bold"
+        bgGradient="linear(to-r, main.blueMarguerite, main.blue600)"
+        bgClip="text"
+      />
     </Link>
   );
 };
