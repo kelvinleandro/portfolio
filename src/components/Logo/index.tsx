@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <TypeWriter
-        text="<  Kelvin/>"
+        text="<  KELVIN />"
         fontSize="lg"
         fontWeight="bold"
         bgGradient="linear(to-r, main.blueMarguerite, main.blue600)"
