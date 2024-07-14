@@ -1,4 +1,4 @@
-import ubuntu from "@/assets/ubuntu.png";
+import carepulse from "@/assets/carepulse.png";
 import kgpt from "@/assets/k-gpt.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
@@ -8,11 +8,11 @@ import { Project } from "@/types/project";
 
 const REACT_PROJECTS: Project[] = [
   {
-    title: "Ubuntu Interface",
+    title: "CarePulse",
     description:
-      "A recreation of the Ubuntu/GNOME home interface, including the top bar and app grid",
-    url: "https://github.com/kelvinleandro/ubuntu-react",
-    imagePath: ubuntu,
+      "A patient management system that allows patients to schedule appointments with a doctor",
+    url: "https://github.com/kelvinleandro/react-carepulse",
+    imagePath: carepulse,
   },
   {
     title: "K-GPT",
