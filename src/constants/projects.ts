@@ -1,9 +1,9 @@
 import carepulse from "@/assets/carepulse.png";
-import kgpt from "@/assets/k-gpt.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
 import easybank from "@/assets/easybank.png";
 import quintura from "@/assets/quintura.png"
+import carameloSniffer from "@/assets/caramelo-sniffer.png";
 import { Project } from "@/types/project";
 
 const REACT_PROJECTS: Project[] = [
@@ -15,11 +15,11 @@ const REACT_PROJECTS: Project[] = [
     imagePath: carepulse,
   },
   {
-    title: "K-GPT",
+    title: "Caramelo Sniffer",
     description:
-      "A ChatBot, visually inspired by the ChatGPT UI, utilizing the OpenAI API to provide AI responses",
-    url: "https://github.com/kelvinleandro/chatgpt-clone-site",
-    imagePath: kgpt,
+      "A Linux packet sniffer using Python's Socket Programming, integrated with React for the UI.",
+    url: "https://github.com/kelvinleandro/caramelo-sniffer-react",
+    imagePath: carameloSniffer,
   },
   {
     title: "Easybank",
