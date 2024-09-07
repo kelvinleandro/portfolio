@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
-      paddingX={{base: 8, sm: 14, md: 28}}
+      paddingX={{ base: 8, sm: 14, md: 28 }}
       paddingY={4}
       overflow="hidden"
       align="center"
@@ -53,7 +53,7 @@ const Hero = () => {
           KELVIN LEANDRO
         </Heading>
         <Heading as="h2" fontSize="2xl">
-          FRONT-END AND MOBILE DEVELOPER
+          WEB DEVELOPMENT AND MACHINE LEARNING
         </Heading>
       </MotionStack>
 
@@ -62,10 +62,10 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         width={{ base: "100%", md: "50%" }}
-        maxW={{md: "300px"}}
+        maxW={{ md: "300px" }}
         overflow="hidden"
       >
-        <Box ref={imageBoxRef} width="100%" height="auto" position="relative" >
+        <Box ref={imageBoxRef} width="100%" height="auto" position="relative">
           <MatrixRain parentRef={imageBoxRef} />
           <Image
             src={programmer_img}

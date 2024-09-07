@@ -22,7 +22,7 @@ const AboutMe = () => {
       direction="column"
       gap={4}
       marginY={4}
-      paddingX={{base: 8, sm: 14, md: 28}}
+      paddingX={{ base: 8, sm: 14, md: 28 }}
       ref={ref}
     >
       <MotionBox
@@ -42,12 +42,10 @@ const AboutMe = () => {
           Computer Engineering at the Federal University of Ceará. During my
           academic life, I participated in projects such as the junior
           enterprise of my course called GTi Engenharia Jr., a web development
-          company focused on the development and consulting of websites. I am
-          currently a scientific initiation scholarship holder, working on
-          research involving machine learning and pattern recognition by
-          applying different methods for detecting anomalies in EEG data for a
-          future &quot;intelligent system for remote patient monitoring&quot;, a
-          larger project in which my research is embedded.
+          company focused on website development and consulting. I am currently
+          an undergraduate research fellow, working on a project for detecting
+          anomalies in biosignals of patients with Chagas disease to aid in
+          cardiological medical diagnosis.
         </Text>
       </MotionBox>
     </Flex>
