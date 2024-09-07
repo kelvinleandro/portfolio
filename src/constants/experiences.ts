@@ -2,21 +2,24 @@ import { Experience } from "@/types";
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: "Project Advisor",
-    where: "GTi Engenharia Jr.",
-    description: "Lorem epsum",
-    when: "2023",
+    role: "Scientific Initiation Scholar",
+    where: "Federal University of Ceará",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum orci non justo pharetra, sed volutpat risus varius. Maecenas vulputate.",
+    when: "2024 - Present",
   },
   {
     role: "Scientific Initiation Scholar",
-    where: "Federal University of Ceara",
-    description: "Lorem epsum",
+    where: "Federal University of Ceará",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum orci non justo pharetra, sed volutpat risus varius. Maecenas vulputate.",
     when: "2023-2024",
   },
   {
-    role: "Scientific Initiation Scholar",
-    where: "Federal University of Ceara",
-    description: "Lorem epsum",
-    when: "2024 - present",
+    role: "Project Advisor",
+    where: "GTi Engenharia Jr.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum orci non justo pharetra, sed volutpat risus varius. Maecenas vulputate.",
+    when: "2023",
   },
 ];
