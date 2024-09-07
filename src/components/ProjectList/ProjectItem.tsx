@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/next-js";
-import { Project } from "@/types/project";
+import { Project } from "@/types";
 import GithubIcon from "../Icons/GithubIcon";
 
 type Props = {

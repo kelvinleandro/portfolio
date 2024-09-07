@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@chakra-ui/react";
-import { Project } from "@/types/project";
+import { Project } from "@/types";
 import ProjectItem from "./ProjectItem";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";

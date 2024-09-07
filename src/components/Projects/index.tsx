@@ -1,31 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import SectionTitle from "../SectionTitle";
-import { Flex, Box, Heading, Center } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  useColorMode,
+} from "@chakra-ui/react";
 import { REACT_PROJECTS, REACT_NATIVE_PROJECTS } from "@/constants/projects";
 import ProjectList from "../ProjectList";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
-const MotionHeading = motion(Heading);
+const MotionTabPanel = motion(TabPanel);
 
 const Projects = () => {
-  const { ref: reactRef, inView: reactInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: reactNativeRef, inView: reactNativeInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [tabIndex, setTabIndex] = useState(0);
+  const {colorMode} = useColorMode();
 
-  const fadeInSlideUpVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const selectedTabColor = colorMode === "light" ? "main.blueMarguerite" : "main.blue400";
 
-  const scaleInVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  const tabPanelVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, x: 50, transition: { duration: 0.5 } },
   };
 
   return (
@@ -35,41 +37,49 @@ const Projects = () => {
       align="center"
       gap={4}
       marginY={4}
-      paddingX={{base: 8, sm: 14, md: 28}}
+      paddingX={{ base: 8, sm: 14, md: 28 }}
     >
       <Box>
         <SectionTitle>Projects</SectionTitle>
       </Box>
 
-      <Center flexDirection="column" marginTop={2}>
-        <MotionHeading
-          as="h3"
-          fontSize="2xl"
-          marginY={3}
-          initial="hidden"
-          animate={reactInView ? "visible" : "hidden"}
-          variants={fadeInSlideUpVariants}
-          ref={reactRef}
-        >
-          REACT
-        </MotionHeading>
-        <ProjectList data={REACT_PROJECTS} />
-      </Center>
+      <Tabs isFitted index={tabIndex} onChange={(index) => setTabIndex(index)}>
+        <TabList>
+          <Tab
+            _selected={{ color: selectedTabColor, borderColor: selectedTabColor }}
+            fontWeight="600"
+            >
+            React
+          </Tab>
+          <Tab
+            _selected={{ color: selectedTabColor, borderColor: selectedTabColor }}
+            fontWeight="600"
+          >
+            React Native
+          </Tab>
+        </TabList>
 
-      <Center flexDirection="column" marginTop={2}>
-        <MotionHeading
-          as="h3"
-          fontSize="2xl"
-          marginY={3}
-          initial="hidden"
-          animate={reactNativeInView ? "visible" : "hidden"}
-          variants={fadeInSlideUpVariants}
-          ref={reactNativeRef}
-        >
-          REACT NATIVE
-        </MotionHeading>
-        <ProjectList data={REACT_NATIVE_PROJECTS} />
-      </Center>
+        <TabPanels>
+          <MotionTabPanel
+            initial="hidden"
+            exit="exit"
+            variants={tabPanelVariants}
+            key="react"
+            animate={tabIndex === 0 ? "visible" : "hidden"}
+          >
+            <ProjectList data={REACT_PROJECTS} />
+          </MotionTabPanel>
+          <MotionTabPanel
+            initial="hidden"
+            exit="exit"
+            variants={tabPanelVariants}
+            key="react-native"
+            animate={tabIndex === 1 ? "visible" : "hidden"}
+          >
+            <ProjectList data={REACT_NATIVE_PROJECTS} />
+          </MotionTabPanel>
+        </TabPanels>
+      </Tabs>
     </Flex>
   );
 };

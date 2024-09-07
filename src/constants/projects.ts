@@ -4,7 +4,7 @@ import todo from "@/assets/todo.png";
 import easybank from "@/assets/easybank.png";
 import quintura from "@/assets/quintura.png"
 import carameloSniffer from "@/assets/caramelo-sniffer.png";
-import { Project } from "@/types/project";
+import { Project } from "@/types";
 
 const REACT_PROJECTS: Project[] = [
   {
