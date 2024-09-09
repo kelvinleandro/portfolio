@@ -19,6 +19,7 @@ const SectionTitle = ({ children }: Props) => {
       <Box position="relative" display="inline-block">
         <Heading
           fontSize="3xl"
+          textTransform="uppercase"
           as="h2"
           textAlign="center"
           _after={{

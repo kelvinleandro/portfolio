@@ -30,6 +30,8 @@ const ExperiencesList = ({ data }: Props) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={scaleInVariants}
+      width={"100%"}
+      maxW={{md: "56rem"}}
     >
       {data.map((item, index) => (
         <ExperienceItem key={index} item={item} />
