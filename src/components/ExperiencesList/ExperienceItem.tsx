@@ -17,11 +17,11 @@ const ExperienceItem = ({
       direction={{ base: "column", md: "row" }}
     >
       <Box flex={1}>
-        <Text fontSize={"xl"} fontWeight={"bold"}>{where}</Text>
+        <Text fontSize={"xl"} fontWeight={"bold"} color={"main.blueMarguerite"}>{where}</Text>
         <Text fontSize={"lg"}>{when}</Text>
       </Box>
       <Box flex={1}>
-        <Text fontSize={"xl"} fontWeight={"bold"}>{role}</Text>
+        <Text fontSize={"xl"} fontWeight={"bold"} color={"main.blue600"}>{role}</Text>
         <Text fontSize={"lg"} >{description}</Text>
       </Box>
     </Flex>
