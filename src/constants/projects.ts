@@ -1,18 +1,18 @@
-import carepulse from "@/assets/carepulse.png";
 import clapperflix from "@/assets/clapperflix.png";
 import todo from "@/assets/todo.png";
 import easybank from "@/assets/easybank.png";
-import quintura from "@/assets/quintura.png"
+import quintura from "@/assets/quintura.png";
 import carameloSniffer from "@/assets/caramelo-sniffer.png";
+import lungSegmentation from "@/assets/lung-segmentation.png";
 import { Project } from "@/types";
 
 const REACT_PROJECTS: Project[] = [
   {
-    title: "CarePulse",
+    title: "Lung Segmentation",
     description:
-      "A patient management system that allows patients to schedule appointments with a doctor",
-    url: "https://github.com/kelvinleandro/react-carepulse",
-    imagePath: carepulse,
+      "A tool for automated lung segmentation from DICOM files, utilizing a Python-based backend for efficient processing.",
+    url: "https://github.com/kelvinleandro/lung-segmentation-client",
+    imagePath: lungSegmentation,
   },
   {
     title: "Caramelo Sniffer",
@@ -41,7 +41,7 @@ const REACT_NATIVE_PROJECTS: Project[] = [
   {
     title: "Quintura",
     description:
-      "\"Quintura\" is a weather app that utilizes the WeatherAPI to provide users with real-time weather forecasts. It allows users to select their preferred units of measurement for a personalized experience.",
+      '"Quintura" is a weather app that utilizes the WeatherAPI to provide users with real-time weather forecasts. It allows users to select their preferred units of measurement for a personalized experience.',
     url: "https://github.com/kelvinleandro/weather-app",
     imagePath: quintura,
   },
